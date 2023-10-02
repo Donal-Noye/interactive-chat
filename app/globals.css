@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+   height: 100%;
+}
+
+body {
+   @apply text-white text-sm;
+}
+
+.register-input {
+   @apply form-input
+   block
+   w-full
+   bg-dark1
+   rounded-md
+   border-0
+   py-1.5
+   text-white
+   shadow-sm
+   ring-1
+   ring-inset
+   ring-gray
+   placeholder:text-gray
+   focus:ring-2
+   focus:ring-inset
+   focus:ring-gold
+   sm:text-sm
+   sm:leading-6
+}
+
+.button {
+   @apply flex
+   justify-center
+   rounded-md
+   px-3
+   py-2
+   text-sm
+   font-bold
+   focus-visible:outline
+   focus-visible:outline-2
+   focus-visible:outline-offset-2
+   transition-colors
+}
+
+.desktop-sidebar {
+   @apply hidden
+   lg:fixed
+   lg:inset-y-0
+   lg:left-0
+   lg:z-40
+   lg:w-20
+   xl:px-6
+   lg:overflow-y-auto
+   lg:bg-dark1
+   lg:border-r-2
+   lg:border-dark2
+   lg:pb-4
+   lg:flex
+   lg:flex-col
+   justify-between
+}
+
+.mobile-footer {
+   @apply fixed
+   justify-between
+   w-full
+   bottom-0
+   z-40
+   flex
+   items-center
+   bg-dark2
+   lg:hidden
+}
+
+.mobile-item {
+   @apply flex
+   gap-x-3
+   leading-6
+   font-semibold
+   w-full
+   justify-center
+   p-4
+   text-gray
+   hover:text-white
+   hover:bg-gold
+   hover:bg-opacity-10
+   transition-colors
+}
+
+.user-list {
+   @apply fixed
+   inset-y-0
+   pb-20
+   lg:pb-0
+   lg:left-20
+   lg:w-80
+   lg:block
+   overflow-y-auto
+   block
+   w-full
+   left-0
+}
+
+.user-box {
+   @apply w-full
+   relative
+   flex
+   items-center
+   space-x-3
+   px-5
+   py-3
+   transition
+   cursor-pointer
+   border-b-2
+   border-dark2
+   hover:bg-dark3
+}
+
+.conversation-box {
+   @apply w-full
+   py-3
+   px-6
+   relative
+   flex
+   items-center
+   border-[1px]
+   border-transparent
+   space-x-3
+   transition
+   cursor-pointer
+}
+
+.conversation-box:hover {
+   border-right: transparent;
+   border-image:
+     linear-gradient(
+             to right,
+             rgba(241, 224, 172),
+             rgba(241, 224, 172, 0.00)
+     ) 1;
+   background: linear-gradient(90deg, rgba(241, 224, 172, 0.20) 0%, rgba(241, 224, 172, 0.00) 78.75%);
+}
+
+.header {
+   @apply bg-dark1
+   py-3
+   px-4
+   lg:px-6
+   flex
+   items-center
+   justify-between
+   w-full
+   border-b-2
+   border-dark2
+}
