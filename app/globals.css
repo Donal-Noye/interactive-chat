@@ -12,6 +12,25 @@ body {
    @apply text-white text-sm;
 }
 
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   @apply bg-dark2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   @apply bg-gold bg-opacity-50;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   @apply bg-gold bg-opacity-75;
+}
+
 .register-input {
    @apply form-input
    block
@@ -119,6 +138,24 @@ body {
    border-b-2
    border-dark2
    hover:bg-dark3
+}
+
+.conversation-sidebar {
+   @apply fixed
+   inset-y-0
+   pb-20
+   lg:pb-0
+   lg:left-20
+   lg:w-80
+   lg:block
+   bg-dark1
+   border-r-2
+   border-dark2
+   overflow-y-auto
+}
+
+aside::-webkit-scrollbar {
+   display: none;
 }
 
 .conversation-box {
