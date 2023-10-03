@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { BsCheckLg } from "react-icons/bs";
 import ImageModal from "@/app/conversations/[conversationId]/components/ImageModal";
+import Avatar from "@/app/components/Avatar";
 
 interface MessageBoxProps {
   isLast?: boolean;
@@ -25,7 +26,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({ data, isLast }) => {
     .join(", ");
 
   const container = clsx("flex gap-3 p-4", isOwn && "justify-end");
-
+	const avatar = clsx(isOwn && 'order-2');
   const body = clsx("flex flex-col gap-2", isOwn && "items-end");
 
   const message = clsx(
@@ -38,6 +39,9 @@ const MessageBox: React.FC<MessageBoxProps> = ({ data, isLast }) => {
 
   return (
     <div className={container}>
+	    <div className={avatar}>
+		    <Avatar user={data.sender} />
+	    </div>
       <div className={body}>
         <div className="flex items-center gap-2">
           <div className={message}>
