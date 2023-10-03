@@ -17,8 +17,7 @@ const UserList: React.FC<UserListProps> = ({ items }) => {
 					font-bold
 					text-white
 					py-4
-					"
-        >
+				">
           People
         </div>
       </div>

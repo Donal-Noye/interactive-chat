@@ -26,7 +26,7 @@ const MobileItem: React.FC<MobileItemProps> = ({
       href={href}
       className={clsx(`group mobile-item`, active && "bg-gold bg-opacity-10")}
     >
-      <Icon className="h-6 w-6" />
+      <Icon className="h-7 w-7" />
     </Link>
   );
 };
